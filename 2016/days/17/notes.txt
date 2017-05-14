@@ -1,0 +1,22 @@
+Algo outline:
+
+
+
+visited_node = {
+    'coords': (x,y),
+    'path': ['UDLR...']
+}
+
+q = Queue
+start node = {
+    'coords': (0,0),
+    'path': []
+}
+
+q.push(start_node)
+exit_is_reached = False
+
+while not exist_is_reached and q is not empty:
+    n = q.pop()
+    x, y = n['coords']
+    hash = md5(PASSCODE + n['path'])
