@@ -1,6 +1,6 @@
 ﻿using System;
-
-using adventofcode2017.days.day08;
+using System.Collections.Generic;
+using adventofcode2017.days.day09;
 
 namespace adventofcode2017
 {
@@ -8,10 +8,26 @@ namespace adventofcode2017
     {
         static void Main(string[] args)
         {
-            var d8 = new Day08();
+            var tests = new List<string> {
+                "{}",
+                "{{{}}}",
+                "{{},{}}",
+                "{{{},{},{{}}}}",
+                "{<a>,<a>,<a>,<a>}",
+                "{{<ab>},{<ab>},{<ab>},{<ab>}}",
+                "{{<!!>},{<!!>},{<!!>},{<!!>}}",
+                "{{<a!>},{<a!>},{<a!>},{<ab>}}"
+            };
 
-            Console.WriteLine($"Largest Value in Registers: {d8.GetLargestValueInRegisters()}");
-            Console.WriteLine($"Largest register value generated: {d8.GetLargestValueGenerated()}");
+            foreach (var test in tests)
+            {
+                var d9 = new Day09(test);
+                Console.WriteLine($"Score: {d9.GetTotalScore()}");
+            }
+
+            var d = new Day09();
+            Console.WriteLine($"Score: {d.GetTotalScore()}");
+            Console.WriteLine($"Garbage Count: {d.GetGarbageCount()}");
         }
     }
 }
