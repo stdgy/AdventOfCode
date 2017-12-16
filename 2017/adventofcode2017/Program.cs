@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using adventofcode2017.days.day09;
+using adventofcode2017.days.day10;
 
 namespace adventofcode2017
 {
@@ -8,26 +8,11 @@ namespace adventofcode2017
     {
         static void Main(string[] args)
         {
-            var tests = new List<string> {
-                "{}",
-                "{{{}}}",
-                "{{},{}}",
-                "{{{},{},{{}}}}",
-                "{<a>,<a>,<a>,<a>}",
-                "{{<ab>},{<ab>},{<ab>},{<ab>}}",
-                "{{<!!>},{<!!>},{<!!>},{<!!>}}",
-                "{{<a!>},{<a!>},{<a!>},{<ab>}}"
-            };
+            var day10 = new Day10(256);
+            Console.WriteLine($"Multiple: {day10.GetMultipleOfFirstTwoNumbers()}");
 
-            foreach (var test in tests)
-            {
-                var d9 = new Day09(test);
-                Console.WriteLine($"Score: {d9.GetTotalScore()}");
-            }
-
-            var d = new Day09();
-            Console.WriteLine($"Score: {d.GetTotalScore()}");
-            Console.WriteLine($"Garbage Count: {d.GetGarbageCount()}");
+            day10 = new Day10(256, parseAllBytes:true);
+            Console.WriteLine($"Knot Hash: {day10.GetKnotHash()}");
         }
     }
 }
