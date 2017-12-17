@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using adventofcode2017.days.day10;
+using adventofcode2017.days.day11;
 
 namespace adventofcode2017
 {
@@ -8,11 +8,9 @@ namespace adventofcode2017
     {
         static void Main(string[] args)
         {
-            var day10 = new Day10(256);
-            Console.WriteLine($"Multiple: {day10.GetMultipleOfFirstTwoNumbers()}");
-
-            day10 = new Day10(256, parseAllBytes:true);
-            Console.WriteLine($"Knot Hash: {day10.GetKnotHash()}");
+            var day11 = new Day11();
+            Console.WriteLine($"Steps away: {day11.GetFewestStepsToChild()}");
+            Console.WriteLine($"Max Distance: {day11.GetMaxLocation()}");
         }
     }
 }
