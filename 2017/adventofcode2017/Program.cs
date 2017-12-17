@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using adventofcode2017.days.day11;
+using adventofcode2017.days.day12;
 
 namespace adventofcode2017
 {
@@ -8,9 +8,10 @@ namespace adventofcode2017
     {
         static void Main(string[] args)
         {
-            var day11 = new Day11();
-            Console.WriteLine($"Steps away: {day11.GetFewestStepsToChild()}");
-            Console.WriteLine($"Max Distance: {day11.GetMaxLocation()}");
+            var d12 = new Day12();
+
+            Console.WriteLine($"Nodes reachable from 0: {d12.GetNumberOfConnectionsFromNode(0)}");
+            Console.WriteLine($"Distint Groups: {d12.GetTotalNumberOfGroups()}");
         }
     }
 }
