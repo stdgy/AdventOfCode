@@ -92,5 +92,22 @@ namespace adventofcode2017.days.day10
             var denseHash = GetDenseHash();
             return GetHex(denseHash);
         }
+
+        public string GetKnotHash (string input, int length)
+        {
+            _lengths = input
+                .Select(ch => (byte)ch)
+                .Concat(new List<byte>() {
+                    17, 31, 73, 47, 23
+                });
+            
+            _list = Enumerable.Range(0, length)
+                .Select(num => (byte)num)
+                .ToList();
+
+            ProcessLengths(64);
+            var denseHash = GetDenseHash();
+            return GetHex(denseHash);
+        }
     }
 }

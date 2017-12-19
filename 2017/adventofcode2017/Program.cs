@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using adventofcode2017.days.day13;
+using adventofcode2017.days.day14;
 
 namespace adventofcode2017
 {
@@ -8,10 +8,10 @@ namespace adventofcode2017
     {
         static void Main(string[] args)
         {
-            var d13 = new Day13();
+            var d14 = new Day14();
 
-            Console.WriteLine($"Trip Severity: {d13.GetTripSeverity(0)}");
-            Console.WriteLine($"Minimum amount to wait for safe passage: {d13.GetMinDelay()}");
+            Console.WriteLine($"Number of squares used: {d14.GetNumUsedSquares()}");
+            Console.WriteLine($"Number of distinct groups: {d14.GetNumberOfGroups()}");
         }
     }
 }
