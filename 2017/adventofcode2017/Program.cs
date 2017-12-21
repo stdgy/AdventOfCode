@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using adventofcode2017.days.day15;
+using adventofcode2017.days.day16;
 
 namespace adventofcode2017
 {
@@ -8,9 +8,10 @@ namespace adventofcode2017
     {
         static void Main(string[] args)
         {
-            var d15 = new Day15();
-            Console.WriteLine($"Number of matches: {d15.GetNumMatches(40000000)}");
-            Console.WriteLine($"Number of matches: {d15.GetNumMatchesModifiedGenerators(5000000)}");
+            var d16 = new Day16();
+
+            Console.WriteLine($"Program ordering after dancing: {d16.GetProgramOrderAfterNumDances(1)}");
+            Console.WriteLine($"Program ordering after dancing: {d16.GetProgramOrderAfterNumDances(1000000000)}");
         }
     }
 }
