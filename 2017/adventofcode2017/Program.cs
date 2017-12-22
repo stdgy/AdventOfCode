@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using adventofcode2017.days.day17;
+using adventofcode2017.days.day18;
 
 namespace adventofcode2017
 {
@@ -8,10 +8,10 @@ namespace adventofcode2017
     {
         static void Main(string[] args)
         {
-            var d17 = new Day17();
+            var d18 = new Day18();
 
-            Console.WriteLine($"Next Value in Buffer: {d17.GetNextValueInCompletedBuffer()}");
-            Console.WriteLine($"Final Value: {d17.GetValueForAngrySpinlock()}");
+            Console.WriteLine($"First sound recovered: {d18.GetValueOfFirstRecovered()}");
+            Console.WriteLine($"Num program 1 sends: {d18.GetNumProgramSends()}");
         }
     }
 }
