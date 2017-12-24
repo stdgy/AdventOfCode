@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using adventofcode2017.days.day18;
+using adventofcode2017.days.day19;
 
 namespace adventofcode2017
 {
@@ -8,10 +8,10 @@ namespace adventofcode2017
     {
         static void Main(string[] args)
         {
-            var d18 = new Day18();
+            var d19 = new Day19();
 
-            Console.WriteLine($"First sound recovered: {d18.GetValueOfFirstRecovered()}");
-            Console.WriteLine($"Num program 1 sends: {d18.GetNumProgramSends()}");
+            Console.WriteLine($"Letters on path: {d19.GetLettersOnPath()}");
+            Console.WriteLine($"Path length: {d19.GetTotalPathLength()}");
         }
     }
 }
