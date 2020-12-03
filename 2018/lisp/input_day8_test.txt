@@ -1,0 +1,66 @@
+2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2
+
+
+create node A
+
+read 2 3
+
+pass on: 0 3 10 11 12 1 1 0 1 99 2 1 1 2
+
+create node B
+
+read 0 3
+
+pass on:
+
+
+Separate processes:
+read header
+parse children -> takes all data after header -> returns children and rest of data
+parse metadata -> takes rest of data from above
+
+
+2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2
+
+(id: A
+ children: (
+                (id: B
+                 children: nil
+                 metadata: (10 11 12)
+                 )
+                 (id: C
+                  children: (
+                                (id: D
+                                 children: nil
+                                 metadata: (99)
+                                 )
+                            )
+                  metadata: (2)
+                  )
+           )
+metadata: (1 1 2)
+)
+
+
+
+parse-node
+  child_count
+  metadata_count
+  
+  return (node, rest)
+
+How can this be expressed recursively?
+
+parse-child (child-count, data)
+  (if (> child-count 0)
+      (cons
+
+get-metadata-sum args
+
+2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2
+
+
+
+get-metadata
+
+(
