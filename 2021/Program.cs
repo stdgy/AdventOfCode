@@ -10,6 +10,8 @@ day2.Part1();
 day2.Part2();
 */
 
-var day3 = new Day03();
-day3.Part1();
+
+var d = new Day05();
+d.Part1();
+d.Part2();
 
