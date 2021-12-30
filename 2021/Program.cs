@@ -14,4 +14,3 @@ day2.Part2();
 var d = new Day05();
 d.Part1();
 d.Part2();
-
