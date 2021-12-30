@@ -65,6 +65,63 @@ public class Day03
         return total;
     }
 
+    public List<int> CalculateOxygenGeneratorRating(string[] lines)
+    {
+        List<string> remainingLines = new List<string>(lines);
+
+        // Calculate most common value
+        for (var i = 0; i < remainingLines[0].Length; i++)
+        {
+            int ones = remainingLines.Sum(line => line[i] == '1' ? 1 : 0);
+            int zeroes = remainingLines.Count - ones;
+
+            if (ones > zeroes || ones == zeroes)
+            {
+                remainingLines.RemoveAll(line => line[i] == '0');
+            }
+            else
+            {
+                remainingLines.RemoveAll(line => line[i] == '1');
+            }
+
+            if (remainingLines.Count == 1)
+            {
+                return remainingLines[0].Select(c => c == '0' ? 0 : 1).ToList();
+            }
+        }
+
+        return remainingLines[0].Select(c => c == '0' ? 0 : 1).ToList();
+    }
+
+    public List<int> CalculateC02ScrubberRating(string[] lines)
+    {
+
+        List<string> remainingLines = new List<string>(lines);
+
+        // Calculate most common value
+        for (var i = 0; i < remainingLines[0].Length; i++)
+        {
+            int ones = remainingLines.Sum(line => line[i] == '1' ? 1 : 0);
+            int zeroes = remainingLines.Count - ones;
+
+            if (ones > zeroes || ones == zeroes)
+            {
+                remainingLines.RemoveAll(line => line[i] == '1');
+            }
+            else
+            {
+                remainingLines.RemoveAll(line => line[i] == '0');
+            }
+
+            if (remainingLines.Count == 1)
+            {
+                return remainingLines[0].Select(c => c == '0' ? 0 : 1).ToList();
+            }
+        }
+
+        return remainingLines[0].Select(c => c == '0' ? 0 : 1).ToList();
+    }
+
     public void Part1() 
     {
         var input = File.ReadAllLines("inputs/03_01.txt");
@@ -80,5 +137,12 @@ public class Day03
     public void Part2()
     {
         var input = File.ReadAllLines("inputs/03_01.txt");
+
+        var oxygenGeneratorRating = CalculateOxygenGeneratorRating(input);
+        var c02ScrubberRating = CalculateC02ScrubberRating(input);
+
+        var total = BinaryToDecimal(oxygenGeneratorRating) * BinaryToDecimal(c02ScrubberRating);
+
+        Console.WriteLine($"Total is: {total}");
     }
 }
